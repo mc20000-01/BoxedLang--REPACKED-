@@ -1,0 +1,12 @@
+# BoxedLANG accent colorscheme.
+# Keeps whatever base theme you're already using (edit the include
+# below if it's not monokai) and adds ONLY the boxedlang.* colors
+# used by bx.yaml on top - no other filetype's highlighting changes.
+
+include "monokai"
+
+color-link boxedlang.comment    "italic #8264a4"
+color-link boxedlang.statement  "#84b29c"
+color-link boxedlang.identifier "#7a97b2"
+color-link boxedlang.dollar     "#bcece1"
+color-link boxedlang.pipe       "#885361"

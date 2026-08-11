@@ -1,0 +1,25 @@
+{
+  "name": "boxedlang",
+  "displayName": "BoxedLANG",
+  "description": "Syntax highlighting for BoxedLANG (.bx) files",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.50.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "bx",
+        "aliases": ["BoxedLANG", "bx"],
+        "extensions": [".bx"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bx",
+        "scopeName": "source.bx",
+        "path": "./syntaxes/bx.tmLanguage.json"
+      }
+    ]
+  }
+}

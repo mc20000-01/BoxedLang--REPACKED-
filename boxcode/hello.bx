@@ -1,0 +1,3 @@
+say hello, world!
+ask what is your name
+say hello $name

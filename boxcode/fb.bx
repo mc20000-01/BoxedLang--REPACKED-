@@ -1,0 +1,16 @@
+box i|0
+math i|$i|1|+
+jumpif $i|10000|>|17
+math r3|$i|3|%
+math r5|$i|5|%
+jumpif $r3|==|0|10
+jumpif $r5|==|0|13
+say $i
+jump 2
+jumpif $r5|==|0|15
+say Fizz
+jump 2
+say Buzz
+jump 2
+say FizzBuzz
+jump 2

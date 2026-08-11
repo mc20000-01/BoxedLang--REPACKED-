@@ -1,0 +1,31 @@
+filetype: bx
+
+detect:
+    filename: "\\.bx$"
+
+rules:
+    # Base: the rest of a code line - target names, bare numbers,
+    # prompt text, ~ and ? punctuation - anything that ISN'T the
+    # keyword itself, a $var, a |, or a comment. Listed first so the
+    # more specific rules below can repaint over parts of it (later
+    # rules win on overlap in micro).
+    - boxedlang.identifier: "^\\s*\\S.*$"
+
+    # Command keyword: only the first token of the line. Anchored so
+    # short aliases (m/s/a/t/i/e/d/j/b) don't false-match later in
+    # the line (e.g. the trailing |m jump-mode flag).
+    - boxedlang.statement: "(?im)^\\s*(box|b|say|s|ask|a|math|m|test|t|jumpif|ji|jump|j|if|i|wait|wt|del|d|weigh|wh|premark|mark|mk|end|e)\\b"
+
+    # Box/variable references: $name $greeting $1 $op etc.
+    - boxedlang.dollar: "\\$[A-Za-z0-9_]+"
+
+    # The | field separator
+    - boxedlang.pipe: "\\|"
+
+    # Comments (hello.bx / calc.bx / truth.bx labels use this same
+    # styling) - listed last so it wins over everything above within
+    # its own span.
+    - boxedlang.comment:
+        start: "//"
+        end: "$"
+        rules: []

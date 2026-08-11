@@ -1,0 +1,10 @@
+// gets the things to do math on
+ask #1
+ask op
+ask #2
+// checks if dividing by 0
+if $op:$#2|/0|==|end
+// calculates the math
+math out|$#1|$#2|$op
+// prints the maths output
+say $#1 $op $#2 = $out

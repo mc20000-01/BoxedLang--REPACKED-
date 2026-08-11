@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "BoxedLANG",
+  "scopeName": "source.bx",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#variables" },
+    { "include": "#pipes" }
+  ],
+  "repository": {
+    "comments": {
+      "name": "comment.line.double-slash.bx",
+      "match": "//.*$"
+    },
+    "keywords": {
+      "name": "keyword.control.bx",
+      "match": "(?i)^\\s*(box|b|say|s|ask|a|math|m|test|t|jumpif|ji|jump|j|if|i|wait|wt|del|d|weigh|wh|premark|mark|mk|end|e)\\b"
+    },
+    "variables": {
+      "name": "variable.parameter.bx",
+      "match": "\\$[A-Za-z0-9_]+"
+    },
+    "pipes": {
+      "name": "punctuation.separator.pipe.bx",
+      "match": "\\|"
+    }
+  }
+}

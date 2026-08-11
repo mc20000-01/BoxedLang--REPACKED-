@@ -1,0 +1,35 @@
+b name|name
+b data|data
+b time|1
+b question|question
+b data1|1
+b data2|2
+b op|=
+b iftrue|1
+b iffalse|1
+b number1|1
+b operand|+
+b number2|2
+b label|label
+b label/line|label/line
+b ismark|m
+b cmd|say
+b arg1|test
+b arg2|1
+b arg3|NULL
+b ect|NULL
+
+box $name|$data //b
+say $data|$time //s
+ask $question //a
+del $name //d
+test $name|$data1|$data2|$op|$iftrue|$iffalse //t
+math $name|$number1|$operand|$number2 //m
+wait $time //wt
+mark $label //mk
+jump $label/line|ismark //j
+if $data1|$data2|$op|$cmd|$arg1|$arg2|$arg3|$ect //i
+jumpif $data1|$data2|$op|$label/line|$ismark //ji
+premark $label //pm
+weigh $data|$name //wh
+end //e
