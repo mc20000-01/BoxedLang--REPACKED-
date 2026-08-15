@@ -1,0 +1,51 @@
+# BoxedLANG syntax definition - used by IDE.py for highlighting.
+# Updated to match current language feature set.
+
+keywords:
+  - say
+  - ask
+  - box
+  - del
+  - jump
+  - mark
+  - premark
+  - mk
+  - jumpif
+  - ji
+  - test
+  - if
+  - math
+  - wait
+  - wt
+  - end
+  - clear
+  - cls
+  - return
+  - ret
+  - import
+  - imp
+  - weigh
+  - wh
+
+operators:
+  - "+"
+  - "-"
+  - "*"
+  - "x"
+  - "/"
+  - "%"
+  - "=="
+  - "!="
+  - ">="
+  - "<="
+  - ">"
+  - "<"
+
+variables:
+  prefix: "$"
+
+special_symbols:
+  - "|"
+  - "\\/"
+  - "#"
+  - "."

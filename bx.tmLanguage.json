@@ -4,26 +4,51 @@
   "scopeName": "source.bx",
   "patterns": [
     { "include": "#comments" },
+    { "include": "#ns_calls" },
+    { "include": "#ret_boxes" },
     { "include": "#keywords" },
     { "include": "#variables" },
-    { "include": "#pipes" }
+    { "include": "#operators" },
+    { "include": "#numbers" },
+    { "include": "#pipes" },
+    { "include": "#escape" }
   ],
   "repository": {
     "comments": {
       "name": "comment.line.double-slash.bx",
       "match": "//.*$"
     },
+    "ns_calls": {
+      "name": "entity.name.function.bx",
+      "match": "[A-Za-z_][A-Za-z0-9_-]*\\.[A-Za-z_][A-Za-z0-9_-]*"
+    },
+    "ret_boxes": {
+      "name": "entity.name.function.bx",
+      "match": "\\bret-[A-Za-z0-9_]+"
+    },
     "keywords": {
       "name": "keyword.control.bx",
-      "match": "(?i)^\\s*(box|b|say|s|ask|a|math|m|test|t|jumpif|ji|jump|j|if|i|wait|wt|del|d|weigh|wh|premark|mark|mk|end|e)\\b"
+      "match": "(?i)^\\s*(box|b|say|s|ask|a|math|m|test|t|jumpif|ji|jump|j|if|i|wait|wt|del|d|weigh|wh|premark|mark|mk|end|e|clear|cls|return|ret|import|imp)\\b"
     },
     "variables": {
       "name": "variable.parameter.bx",
-      "match": "\\$[A-Za-z0-9_]+"
+      "match": "\\$[A-Za-z0-9_#?][A-Za-z0-9_#?-]*"
+    },
+    "operators": {
+      "name": "keyword.operator.bx",
+      "match": "==|!=|>=|<=|>|<|\\+|-|\\*|/|%"
+    },
+    "numbers": {
+      "name": "constant.numeric.bx",
+      "match": "\\b[0-9]+#?\\b"
     },
     "pipes": {
       "name": "punctuation.separator.pipe.bx",
       "match": "\\|"
+    },
+    "escape": {
+      "name": "constant.character.escape.bx",
+      "match": "\\\\/|~"
     }
   }
 }

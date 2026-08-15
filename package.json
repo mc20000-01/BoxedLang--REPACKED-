@@ -2,7 +2,7 @@
   "name": "boxedlang",
   "displayName": "BoxedLANG",
   "description": "Syntax highlighting for BoxedLANG (.bx) files",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "engines": { "vscode": "^1.50.0" },
   "categories": ["Programming Languages"],
   "contributes": {
